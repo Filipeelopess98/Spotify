@@ -44,12 +44,21 @@ header {
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+  gap: 10px; /* Adiciona espaçamento entre ícone e barra de pesquisa */
 }
 
-.home-icon i {
-  font-size: 20px;
+.home-icon {
+  padding: 7px;
+  border-radius: 50%;
+  background-color: #242424;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
   color: #e8e8e8;
-  padding-right: 10px;
+  width: 45px;
+  height: 45px;
 }
 
 .search-bar {
@@ -59,9 +68,9 @@ header {
   padding: 8px 16px;
   border-radius: 20px;
   width: 450px;
-  height: 45px;
+  height: 42px;
   position: relative;
-  margin-right: -148px;
+  margin-right: -100px;
 }
 
 .search-bar i.fa-magnifying-glass {
@@ -79,10 +88,18 @@ header {
   font-weight: 600;
 }
 
-.search-bar i.fa-solid fa-bars {
+.search-bar p {
+  padding-right: 10px;
   color: #acacac;
+  margin: 0;
+}
+
+.folder {
+  display: flex;
+  align-items: center;
   position: absolute;
-  right: 10px;
+  right: 15px;
+  padding-left: 20px;
 }
 
 .folder i {
@@ -92,11 +109,6 @@ header {
 
 .folder i:hover {
   color: #fff;
-}
-
-.search-bar p {
-  padding-right: 10px;
-  color: #acacac;
 }
 
 .buttons {
