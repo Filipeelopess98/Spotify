@@ -16,7 +16,7 @@ body {
 header {
   position: fixed;
   width: 100%;
-  top: 0;
+  top: -2;
   left: 0;
   right: 0;
   z-index: 1000;
@@ -44,7 +44,7 @@ header {
   align-items: center;
   justify-content: center;
   flex-grow: 1;
-  gap: 10px; /* Adiciona espaçamento entre ícone e barra de pesquisa */
+  gap: 10px;
 }
 
 .home-icon {
@@ -59,6 +59,14 @@ header {
   color: #e8e8e8;
   width: 45px;
   height: 45px;
+  border: none;
+  transition: background-color 0.3s, transform 0.3s; 
+}
+
+.home-icon:hover {
+  background-color:  #575656; 
+  transform: scale(1.1);
+  color: #fff; /
 }
 
 .search-bar {
@@ -70,11 +78,12 @@ header {
   width: 450px;
   height: 42px;
   position: relative;
-  margin-right: -100px;
+  margin-right: -130px;
 }
 
 .search-bar i.fa-magnifying-glass {
-  color: #fff;
+  color: #acacac;
+  font-size: 20px;
 }
 
 .search-bar input {
@@ -126,14 +135,16 @@ header {
 
 .inscreva {
   background-color: transparent;
-  color: #fff;
+  color: #acacac;
   font-weight: 600;
 }
 
 .entrar {
+  width: 110px;
+  height: 45px;
   background-color: #fff;
   color: #000;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .entrar:hover {
@@ -175,7 +186,12 @@ header {
 .nav-library i,
 .nav-library p {
   color: #b7b3b6;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.nav-library i:hover,
+.nav-library p:hover {
+ color: #fff;
 }
 
 .nav-library p,
@@ -229,21 +245,22 @@ header {
 }
 
 .nav-footer {
-  margin-top: 296px;
+  margin-top: 329px;
   padding-bottom: 23px;
 }
 
 .nav-footer a {
   color: #a7a7a7;
   text-decoration: none;
-  font-size: 10px;
+  font-size: 9.5px;
   margin-right: 12px;
   margin-bottom: 8px;
   gap: 10px;
 }
 
 .Cookies {
-  font-weight: 900;
+  font-weight: 800;
+  font-size: 13px;
 }
 
 .nav-language-button {
@@ -278,6 +295,8 @@ section.content {
   margin-top: -24px;
   margin-right: -26px;
   margin-left: 85px;
+  overflow: hidden;
+  position: relative;
 }
 
 .content h2 {
@@ -323,6 +342,97 @@ section.content {
   transform: scale(1.1);
 }
 
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+
+  color: #fff;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 150px;
+  margin: 10px;
+}
+
+.footer-column h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+  color: #acacac;
+  font-size: 11.5px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-column ul li a:hover {
+  font-size: 11px;
+  color: #fff;
+  font-weight: 500;
+}
+
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+}
+
+.footer-social a {
+  margin-right: 10px;
+  color: #acacac;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.footer-social a {
+  margin-right: 10px;
+  font-size: 19px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #292929;
+  border-radius: 50%;
+  border: none;
+  color: #e8e8e8;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.footer-social a:hover {
+  background-color: #575656;
+  transform: scale(1.1);
+}
+
+.footer-copyright {
+  flex-basis: 100%;
+  text-align: start;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #acacac;
+}
+
+
+
 .banner {
   position: fixed;
   bottom: 0;
@@ -333,16 +443,18 @@ section.content {
   justify-content: space-between;
   align-items: center;
   height: 60px;
+
 }
 
 .banner p {
-  font-size: 13px;
+  font-size: 12px;
   padding-left: 15px;
   padding-top: 2px;
+  font-weight: 600;
 }
 
 .banner h2 {
-  font-size: 18px;
+  font-size: 14px;
   padding-left: 15px;
 }
 
@@ -351,12 +463,43 @@ section.content {
   background-color: #fff;
   color: #000;
   font-weight: 600;
-  border-radius: 15px;
-  height: 36px;
-  width: 140px;
+  border-radius: 25px;
+  height: 45px;
+  width: 160px;
   margin-right: 20px;
+  font-size: 12.5px;
+  font-weight: 700;
 }
 
 .banner button:hover {
   transform: scale(1.1);
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #121212, #616161);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #616161;
+}
+
+::-webkit-scrollbar-horizontal {
+  height: 12px;
+  background-color: #121212;
+}
+
+::-webkit-scrollbar-thumb-horizontal {
+  background: #616161;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb-horizontal:hover {
+  background: linear-gradient(180deg, #121212, #616161);
+}
+
