@@ -95,8 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     artistCard.innerHTML = `
         <img src="${artist.image}" alt="imagem do ${artist.name}">
-        <h3 style="font-size: 14px;">${artist.name}</h3> 
-       <p style="font-size: 13px;  color: #b7b3b6;">Artista</p>
+      <h3 style="font-size: 13px; font-weight: 500;">${artist.name}</h3> 
+       <p style="font-size: 12px;  color: #b7b3b6;">Artista</p>
         `;
 
     artistsGrid.appendChild(artistCard);
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     albumCard.innerHTML = `
         <img src="${album.image}" alt="imagem do ${album.name}">
-        <h3 style="font-size: 14px;">${album.name}</h3>
+        <h3 style="font-size: 13px; font-weight: 500;">${album.name}</h3>
         <p style="font-size: 12px; color: #b7b3b6;">${album.artist}</p>
 
         

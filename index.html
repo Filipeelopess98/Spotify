@@ -17,11 +17,33 @@
   </head>
 
   <body>
-    <div class="container">
-      <nav class="sidebar">
-        <div class="nav-logo">
+    <header>
+      <div class="nav-logo">
+        <div class="logo-spotify">
           <i class="fa-brands fa-spotify"></i>
         </div>
+        <div class="search-container">
+          <div class="home-icon">
+            <i class="fa-solid fa-house"></i>
+          </div>
+          <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="O que você quer ouvir?" />
+            <p>|</p>
+            <div class="folder">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button class="inscreva">Inscreva-se</button>
+          <button class="entrar">Entrar</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <nav class="sidebar">
         <div class="nav-library">
           <i class="fa-solid fa-bars-staggered"></i>
           <p>Sua Biblioteca +</p>
@@ -34,15 +56,16 @@
         <div class="nav-podcast">
           <h5>Que tal Seguir um Podcast?</h5>
           <p>Avisaremos você sobre nossos episódios</p>
-          <button>Explore Poadcast</button>
+          <button>Explore Podcast</button>
         </div>
         <div class="nav-footer">
           <a href="#">Legal</a>
           <a href="#">Centro de Privacidade</a>
           <a href="#">Política de Privacidade</a>
-          <a href="#">Cookies</a>
+
           <a href="#">Sobre Anúncios</a>
           <a href="#">Acessibilidade</a>
+          <a class="Cookies" href="#">Cookies</a>
         </div>
         <button class="nav-language-button">
           <i class="fa-solid fa-globe"></i>
@@ -50,28 +73,14 @@
         </button>
       </nav>
       <main>
-        <header class="header-container">
-          <div class="home">
-            <button>
-              <i class="fa-solid fa-house"></i>
-            </button>
-          </div>
-          <div class="search-bar">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="O que você quer ouvir?" />
-          </div>
-          <div class="buttons">
-            <button class="inscreva">Inscreva-se</button>
-            <button class="entrar">Entrar</button>
-          </div>
-        </header>
         <section class="content">
-          <h2>Artistas Populares</h2>
+          <h2 class="">Artistas Populares</h2>
           <div class="artists-grid">
             <!---Inserir dados com JS-->
           </div>
-
-          <h2>Álbuns Populares</h2>
+          <br />
+          <br />
+          <h2 class="">Álbuns Populares</h2>
           <div class="albums-grid">
             <!---Inserir dados com JS-->
           </div>
@@ -89,5 +98,6 @@
       <button>Inscreva-se Grátis</button>
     </div>
   </body>
+
   <script src="./script.js"></script>
 </html>
